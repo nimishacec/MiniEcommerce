@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><title>
+	JobPortal Admin
+</title>
+<!-- plugins:css -->
+<link rel="stylesheet" href="../../vendors/feather/feather.css" /><link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css" /><link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css" /><link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css" />
+<!-- endinject -->
+<!-- Plugin css for this page -->
+<link rel="stylesheet" href="../../vendors/datatables.net-bs4/dataTables.bootstrap4.css" /><link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css" /><link rel="stylesheet" type="text/css" href="../../Script/js/select.dataTables.min.css" />
+<!-- End plugin css for this page -->
+<!-- inject:css -->
+<link rel="stylesheet" href="../../css/vertical-layout-light/style.css" />
+<!-- endinject -->
+<link rel="shortcut icon" href="../../images/favicon.png" /><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" /></head>
+<body>
+    <form method="post" action="./CandidateViewDashboard?CandidateID=5" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="AE09Q9aBbvgLoeumM1zeHdh7KzTvr66EUcwN0Bg4yQBT822JVzm34F1UTkLuamNw239j1spGltU1MooalCKif5/49bf+wHrAhKMqCWikM5EJAyO72nmAVdPLDgJMl0bKICt+Wv/+/hsk8iONxotFkhpLrTCiwha8204CZ76FZ+atUAw+GcRgVkhqgpEnlyybmIIrqCJ8fal80RsUKbMzq3nO0fywI0EibxoZiU8kKM7Zoc6pdjUCQ9pTWym+Qo8c8QZb/pN2ApBssQ5RsRVyJEBlUyP3u0qwcLmlfEADwgIKvmHHJhdc7OQb+uBaT5GG1r245nWA5f4PW1BYnfeK7Jf7tBm+43LU+7eOlvHVkFvxLimr++Nbi6AJBKkES1lgkCn4a+iN+m2lQ5U0XzHtLcF2inJyTAX4/4uQcSeSdnMmflvKXSb5WNzPSwMR3TRXTfX8KCcUZrK2+hbInsaM0sZWlFbCQ9F4q5xUwRYMAMsmObjcPGXZ9PQ3demHzXMdTCBUb9TqRzfpP7o3P6dhYRjPXLjGCEqK5UGwUn2oWmin5aXN7OLESDfc2Beo/3mfSbL5MdJVMObwyG+L8L541gS2Tf4lX8aCLl8C3WVt4xmXfKJRzH93C20Sn9Tm7Ww18VFUarfwLWy4Q+TeI0G7c8U31+ieBCAeJcA1QhqV5iJ7oE2g5vzDtgFI6tMiQZ/l0R87TO/78MOF8jKKSAg2CMe7rctCkfHy0yoDEB/S4umnY0/uUq6uG06oPvEUZp5loDj7fqueNFUt3zFY35Z9KZM28D0lRDzi5rKrG6z0b1NESQW/cyLwbMV1LHf4ToMtCoHg+dDLYcsVHiAL2NMrUGD17HQNaGT9SVbZN2vjonhETqYpHfIhAYzX7wtkxGTB" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+<style type="text/css">
+  .skills {
+    display: flex;
+    justify-content: space-between;
+}
+.resume-btns {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap:10px;
+}
+.resume-btns a{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+</style>
+        <div class="container-scroller">
+ <!-- partial:partials/_navbar.html -->
+ <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+   <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+     <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="../../images/logo.svg" class="mr-2" alt="logo"/></a>
+     <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../../images/logo-mini.svg" alt="logo"/></a>
+   </div>
+   <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+     <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+       <span class="icon-menu"></span>
+     </button>
+     <ul class="navbar-nav mr-lg-2">
+       <li class="nav-item nav-search d-none d-lg-block">
+         <div class="input-group">
+           <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+             <span class="input-group-text" id="search">
+               <i class="icon-search"></i>
+             </span>
+           </div>
+           <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+         </div>
+       </li>
+     </ul>
+     <ul class="navbar-nav navbar-nav-right">
+       <li class="nav-item dropdown">
+         <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+           <i class="icon-bell mx-0"></i>
+           <span class="count"></span>
+         </a>
+         <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+           <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+           <a class="dropdown-item preview-item">
+             <div class="preview-thumbnail">
+               <div class="preview-icon bg-success">
+                 <i class="ti-info-alt mx-0"></i>
+               </div>
+             </div>
+             <div class="preview-item-content">
+               <h6 class="preview-subject font-weight-normal">Application Error</h6>
+               <p class="font-weight-light small-text mb-0 text-muted">
+                 Just now
+               </p>
+             </div>
+           </a>
+           <a class="dropdown-item preview-item">
+             <div class="preview-thumbnail">
+               <div class="preview-icon bg-warning">
+                 <i class="ti-settings mx-0"></i>
+               </div>
+             </div>
+             <div class="preview-item-content">
+               <h6 class="preview-subject font-weight-normal">Settings</h6>
+               <p class="font-weight-light small-text mb-0 text-muted">
+                 Private message
+               </p>
+             </div>
+           </a>
+           <a class="dropdown-item preview-item">
+             <div class="preview-thumbnail">
+               <div class="preview-icon bg-info">
+                 <i class="ti-user mx-0"></i>
+               </div>
+             </div>
+             <div class="preview-item-content">
+               <h6 class="preview-subject font-weight-normal">New user registration</h6>
+               <p class="font-weight-light small-text mb-0 text-muted">
+                 2 days ago
+               </p>
+             </div>
+           </a>
+         </div>
+       </li>
+       <li class="nav-item nav-profile dropdown">
+         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+           <img src="../../images/faces/face28.jpg" alt="profile"/>
+         </a>
+         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+           <a class="dropdown-item">
+             <i class="ti-settings text-primary"></i>
+             Settings
+           </a>
+           <a class="dropdown-item" href="AdminLogin.aspx">
+             <i class="ti-power-off text-primary"></i>
+             Logout
+           </a>
+         </div>
+       </li>
+       <li class="nav-item nav-settings d-none d-lg-flex">
+         <a class="nav-link" href="#">
+           <i class="icon-ellipsis"></i>
+         </a>
+       </li>
+     </ul>
+     <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+       <span class="icon-menu"></span>
+     </button>
+   </div>
+ </nav>
+ <!-- partial -->
+ <div class="container-fluid page-body-wrapper">
+   <!-- partial:partials/_settings-panel.html -->
+   <div class="theme-setting-wrapper">
+     <div id="settings-trigger"><i class="ti-settings"></i></div>
+     <div id="theme-settings" class="settings-panel">
+       <i class="settings-close ti-close"></i>
+       <p class="settings-heading">SIDEBAR SKINS</p>
+       <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+       <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+       <p class="settings-heading mt-2">HEADER SKINS</p>
+       <div class="color-tiles mx-0 px-4">
+         <div class="tiles success"></div>
+         <div class="tiles warning"></div>
+         <div class="tiles danger"></div>
+         <div class="tiles info"></div>
+         <div class="tiles dark"></div>
+         <div class="tiles default"></div>
+       </div>
+     </div>
+   </div>
+   <div id="right-sidebar" class="settings-panel">
+     <i class="settings-close ti-close"></i>
+     <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+       <li class="nav-item">
+         <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+       </li>
+     </ul>
+     <div class="tab-content" id="setting-content">
+       <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+         <div class="add-items d-flex px-3 mb-0">
+           <form class="form w-100">
+             <div class="form-group d-flex">
+               <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+               <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+             </div>
+           </form>
+         </div>
+         <div class="list-wrapper px-3">
+           <ul class="d-flex flex-column-reverse todo-list">
+             <li>
+               <div class="form-check">
+                 <label class="form-check-label">
+                   <input class="checkbox" type="checkbox">
+                   Team review meeting at 3.00 PM
+                 </label>
+               </div>
+               <i class="remove ti-close"></i>
+             </li>
+             <li>
+               <div class="form-check">
+                 <label class="form-check-label">
+                   <input class="checkbox" type="checkbox">
+                   Prepare for presentation
+                 </label>
+               </div>
+               <i class="remove ti-close"></i>
+             </li>
+             <li>
+               <div class="form-check">
+                 <label class="form-check-label">
+                   <input class="checkbox" type="checkbox">
+                   Resolve all the low priority tickets due today
+                 </label>
+               </div>
+               <i class="remove ti-close"></i>
+             </li>
+             <li class="completed">
+               <div class="form-check">
+                 <label class="form-check-label">
+                   <input class="checkbox" type="checkbox" checked>
+                   Schedule meeting for next week
+                 </label>
+               </div>
+               <i class="remove ti-close"></i>
+             </li>
+             <li class="completed">
+               <div class="form-check">
+                 <label class="form-check-label">
+                   <input class="checkbox" type="checkbox" checked>
+                   Project review
+                 </label>
+               </div>
+               <i class="remove ti-close"></i>
+             </li>
+           </ul>
+         </div>
+         <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+         <div class="events pt-4 px-3">
+           <div class="wrapper d-flex mb-2">
+             <i class="ti-control-record text-primary mr-2"></i>
+             <span>Feb 11 2018</span>
+           </div>
+           <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+           <p class="text-gray mb-0">The total number of sessions</p>
+         </div>
+         <div class="events pt-4 px-3">
+           <div class="wrapper d-flex mb-2">
+             <i class="ti-control-record text-primary mr-2"></i>
+             <span>Feb 7 2018</span>
+           </div>
+           <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+           <p class="text-gray mb-0 ">Call Sarah Graves</p>
+         </div>
+       </div>
+       <!-- To do section tab ends -->
+       <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+         <div class="d-flex align-items-center justify-content-between border-bottom">
+           <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
+           <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+         </div>
+         <ul class="chat-list">
+           <li class="list active">
+             <div class="profile"><img src="../../images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+             <div class="info">
+               <p>Thomas Douglas</p>
+               <p>Available</p>
+             </div>
+             <small class="text-muted my-auto">19 min</small>
+           </li>
+           <li class="list">
+             <div class="profile"><img src="../../images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+             <div class="info">
+               <div class="wrapper d-flex">
+                 <p>Catherine</p>
+               </div>
+               <p>Away</p>
+             </div>
+             <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+             <small class="text-muted my-auto">23 min</small>
+           </li>
+           <li class="list">
+             <div class="profile"><img src="../../images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+             <div class="info">
+               <p>Daniel Russell</p>
+               <p>Available</p>
+             </div>
+             <small class="text-muted my-auto">14 min</small>
+           </li>
+           <li class="list">
+             <div class="profile"><img src="../../images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+             <div class="info">
+               <p>James Richardson</p>
+               <p>Away</p>
+             </div>
+             <small class="text-muted my-auto">2 min</small>
+           </li>
+           <li class="list">
+             <div class="profile"><img src="../../images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+             <div class="info">
+               <p>Madeline Kennedy</p>
+               <p>Available</p>
+             </div>
+             <small class="text-muted my-auto">5 min</small>
+           </li>
+           <li class="list">
+             <div class="profile"><img src="../../images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+             <div class="info">
+               <p>Sarah Graves</p>
+               <p>Available</p>
+             </div>
+             <small class="text-muted my-auto">47 min</small>
+           </li>
+         </ul>
+       </div>
+       <!-- chat tab ends -->
+     </div>
+   </div>
+   <!-- partial -->
+   <!-- partial:partials/_sidebar.html -->
+  <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="AdminNewDash.aspx">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Employees</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">  <a id="btnEmployees" class="nav-link" href="javascript:__doPostBack(&#39;ctl00$btnEmployees&#39;,&#39;&#39;)">Employees</a>
+                                </li>
+               
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Candidates</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a id="btnCandidates" class="nav-link" href="javascript:__doPostBack(&#39;ctl00$btnCandidates&#39;,&#39;&#39;)">Candidates</a>
+                               </li>
+              </ul>
+            </div>
+          </li>
+
+           
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="icon-menu menu-icon"></i>
+              <span class="menu-title">Trainers</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a id="LinkButton1" class="nav-link" href="javascript:__doPostBack(&#39;ctl00$LinkButton1&#39;,&#39;&#39;)">Trainers List</a>
+               </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Job Applications</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">  
+                    <a id="btnJobApplications" class="nav-link" href="javascript:__doPostBack(&#39;ctl00$btnJobApplications&#39;,&#39;&#39;)">Job Applications</a>
+                               </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="icon-contract menu-icon"></i>
+              <span class="menu-title">Requests</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">   
+                    <a id="btnJobEditRequests" class="nav-link" href="javascript:__doPostBack(&#39;ctl00$btnJobEditRequests&#39;,&#39;&#39;)">Job Edit Requests</a>
+                 </li>
+                   <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">New Jobs</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">  <a id="lnknewjobs" class="nav-link" href="javascript:__doPostBack(&#39;ctl00$lnknewjobs&#39;,&#39;&#39;)">New Jobs</a>
+                        </li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+              <i class="icon-ban menu-icon"></i>
+              <span class="menu-title">Error pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="error">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/documentation/documentation.html">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Documentation</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+     
+     <script src="../vendors/js/vendor.bundle.base.js"></script>
+<!-- endinject -->
+<!-- Plugin js for this page -->
+<script src="../vendors/chart.js/Chart.min.js"></script>
+<script src="../vendors/datatables.net/jquery.dataTables.js"></script>
+<script src="../vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+<script src="../Scripts/js/dataTables.select.min.js"></script>
+
+<!-- End plugin js for this page -->
+<!-- inject:js -->
+<script src="../Scripts/js/off-canvas.js"></script>
+<script src="../Scripts/js/hoverable-collapse.js"></script>
+<script src="../Scripts/js/template.js"></script>
+<script src="../Scripts/js/settings.js"></script>
+<script src="../Scripts/js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="../Scripts/js/dashboard.js"></script>
+<script src="../Scripts/js/Chart.roundedBarCharts.js"></script>
+       <div class="main-panel">
+ <div class="content-wrapper">
+            
+   <div style="text-align: left">
+    <a href="CandidateList.aspx">Back</a>
+</div>
+
+<section>
+    
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card mb-4">
+          <div class="card-body text-center">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+              class="rounded-circle img-fluid" style="width: 150px;">
+            <h5 class="my-3">John Smith</h5>
+            <p class="text-muted mb-1">Full Stack Developer</p>
+            <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+            <div class="d-flex justify-content-center mb-2">
+              <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary">LinkedIn</button>
+              <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary ms-1">Portfolio</button>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-4">
+          <div class="card-body">
+            <b>Resume: <span class="text-danger">Rejected</span></b>
+            <div class="resume-btns mt-2"><a class="btn btn-primary"><i class="mdi mdi-eye"></i> View Resume</a>
+            <a class="btn btn-success"><i class="mdi mdi-folder-download"></i> Download</a></div>
+          </div>
+        </div>
+        <div class="card mb-4 mb-lg-0">
+          <div class="card-body p-0">
+            <div class="p-2">Key Skills</div>
+            <ul class="list-group list-group-flush rounded-3">
+              <li class="list-group-item justify-content-between align-items-center p-3">
+               <p class="mt-1 mb-1 skills" style="font-size: .77rem;"><span>ASP</span><span>90%</span></p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="72"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="list-group-item justify-content-between align-items-center p-3">
+               <p class="mt-1 mb-1 skills" style="font-size: .77rem;"><span>PHP</span><span>40%</span></p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="72"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="list-group-item justify-content-between align-items-center p-3">
+                <p class="mt-1 mb-1 skills" style="font-size: .77rem;"><sapn>HTML</sapn><span>50%</span></p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="72"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="list-group-item justify-content-between align-items-center p-3">
+                <p class="mt-1 mb-1 skills" style="font-size: .77rem;"><span>CSS</span><span>60%</span></p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="72"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="list-group-item justify-content-between align-items-center p-3">
+               <p class="mt-1 mb-1 skills" style="font-size: .77rem;"><span>Javascript</span><span>70%</span></p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="72"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Full Name</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">Johnatan Smith</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Email</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">example@example.com</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Phone</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">(097) 234-5678</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Mobile</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">(098) 765-4321</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Address</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card mb-4 mb-md-0">
+              <div class="card-body">
+                <p class="mb-4">Qualifications
+                </p>
+                <div class="qualifications">
+                  <p><b>Gratuated Msc Computer Science</b></p>
+                  <p>Cusat university, Kochi</p>
+                  <p>Project: Robotic Machines</p>
+                  <p>Key Skills: ASP, PHP, JAVA, React Js</p>
+                  <hr>
+                   <p><b>Gratuated Msc Computer Science</b></p>
+                  <p>Cusat university, Kochi</p>
+                  <p>Project: Robotic Machines</p>
+                  <p>Key Skills: ASP, PHP, JAVA, React Js</p>
+                  <hr>
+                  <p><b>Gratuated Msc Computer Science</b></p>
+                  <p>Cusat university, Kochi</p>
+                  <p>Project: Robotic Machines</p>
+                  <p>Key Skills: ASP, PHP, JAVA, React Js</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 mt-4">
+            <div class="card mb-4 mb-md-0">
+              <div class="card-body">
+                <p class="mb-4"> Professional Experience
+                </p>
+                <p><b>Blue Blocks IT Solutions</b>, Kochi</p>
+                <p>Senior ASP Developer</p>
+                <p>Key Skills: ASP, PHP, JAVA, React Js</p>
+                <hr>
+                <p><b>Blue Blocks IT Solutions</b>, Kochi</p>
+                <p>Senior ASP Developer</p>
+                <p>Key Skills: ASP, PHP, JAVA, React Js</p>
+                <hr>
+                <p><b>Blue Blocks IT Solutions</b>, Kochi</p>
+                <p>Senior ASP Developer</p>
+                <p>Key Skills: ASP, PHP, JAVA, React Js</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</section>
+        
+        
+      <br />
+    </div>
+  
+
+         </div>
+      </div>
+        
+      
+      <!-- Footer -->
+      <footer class="footer mt-auto">
+   <div class="d-sm-flex justify-content-center justify-content-sm-between">
+     <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
+     <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
+   </div>
+   <div class="d-sm-flex justify-content-center justify-content-sm-between">
+     <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Distributed by <a href="https://www.themewagon.com/" target="_blank">Themewagon</a></span> 
+   </div>
+ </footer>  
+     
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8A0A7F28" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="rrX7Ynf5fji69OJzbUjJI4OwtcwNjdRJIzLBn6hJOziYHM4PRfA7n0GN/730qcLNaXofmsoCPHlAlvJ3vpLDCBB0XHewaiUfI9CsjwdsNIH9QvBhgdV9FQpnZfEqcRoHAqIZyZMlNQMhjU67+cRgrsCvh1LmA4ADC2imZkhpExXR5jUWnWDPIdAcB5WBy0dhCYzhwbpC6mjR3zCpZEhE3JumeI9P1upYztJ8qiPw9OCOc49e/jQkuYlQ4YO4OSCQ2jyQ1TIBKcws8Un5fksk6A==" />
+</div></form>
+     
+
+<!-- Visual Studio Browser Link -->
+<script type="text/javascript" src="https://localhost:44399/26d83e7a23fe4cd09e35989d5b26cca8/browserLink" async="async" id="__browserLink_initializationData" data-requestId="515525adbef94e87b53a5d5acbfb05a4" data-appName="Chrome"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>
